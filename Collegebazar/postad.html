@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>College Bazar</title>
+  <meta charset="utf-8">
+  
+  <!--Linking to CSS--> 
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  
+  <!--Built in JS Fonts--> 
+ <!-- <script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+   <script type="text/javascript" src="js/cufon-replace.js"></script>
+  <script type="text/javascript" src="js/Humanst521_BT_400.font.js"></script>
+  <script type="text/javascript" src="js/Humanst521_Lt_BT_400.font.js"></script>-->
+  
+  <!--Built in JS Library for image roundabout--> 
+	<script type="text/javascript" src="js/roundabout.js"></script>
+  <script type="text/javascript" src="js/roundabout_shapes.js"></script>
+  <script type="text/javascript" src="js/gallery_init.js"></script>
+ 
+
+<script language="javascript">
+ <!--
+ function validate()
+{
+
+	var message="Invalid ";
+    var valid =true;
+    var name=document.getElementById("name").value;
+    var pwd=document.getElementById("password").value;
+    var pt=document.getElementById("pt").value;
+    var pn=document.getElementById("productname").value;
+	var price=document.getElementById("price").value;
+	var desp=document.getElementById("desp").value;
+	var pic=document.getElementById("file").value;
+
+	var len1=name.length;
+	var len2=pwd.length;
+	var len3=pt.length;
+	var len4=pn.length;
+	var len5=price.length;
+	var len6=desp.length;
+	var len7=pic.length;
+	
+    var name_re = new RegExp("^[a-zA-Z0-9]+$","g");
+	var pwd_re=new RegExp("^[A-Za-z0-9'-._]+$","g");
+    var pn_re=new RegExp("^[A-Za-z0-9'-._ ]+$","g");
+	var price_re=new RegExp("^[\\d]+$","g");
+    
+    
+    if(len1==0 || len2==0 || len3==0 || len4==0  || len6==0 || len7==0 )
+	{
+		alert(" All fields are Mandatory");
+		return false;
+	}
+    
+    if(!name.match(name_re))
+   	{
+   		message=message+"User Name ";
+   		valid=false;
+   	}
+    if(!pwd.match(pwd_re))
+   	{
+   		message=message+"User Password ";
+   		valid=false;
+   	}
+
+	if(len2<6)
+	{
+   		alert("Password too Short(min 6)");
+   		valid=false;
+   		return false;
+	}
+	
+   	if(!pn.match(pn_re))
+   	{
+   		message+="Product Name ";
+   		valid=false;
+   	}
+   	if(!price.match(price_re) && price!="")
+  	{
+   		message+="Price ";
+   		valid=false;
+   	}
+	if(!valid)
+	{
+	alert(message);
+	}
+	
+return valid;
+}
+//-->
+  </script>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+    <div class="container">
+    	<h1>College Bazar</h1>
+      <nav> <!-- navigator links -->
+        <ul>
+     <li><a href="index.html" class="current">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+		  <li><a href="pg.html">PG's</a></li>
+          <li><a href="gadgets.html">Gadgets</a></li>
+		  <li><a href="contacts.html">Contact Us</a></li>
+		  
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+   <div class="main-box">&nbsp;<div class="container">
+      <div class="inside">
+        <div class="wrapper">
+        	<!-- aside -->
+          <aside>
+            <h2>&nbsp;</h2>
+         <!-- <aside>
+            <div align="right"><a href="register.php"><img src="images/reg.jpg" width="208" height="157"></a></div>
+          </aside>-->
+          <!--<img src="images/postint.jpg" alt="" width="340" height="300">-->
+            <!-- /.contacts -->
+          <h3></h3>
+            ....          </aside>
+          <!-- content -->
+          <section id="content">
+            <article>
+            	<h2>POST <span>Ad</span></h2>
+                <form id="contacts-form" action="post.php" method="post" onSubmit="return validate();" enctype="multipart/form-data">
+                  <fieldset>
+                  <div class="field">
+                    <label>User Name:</label>
+                    <input type="text" name="name" id="name" value="" size="20"/>
+                  </div>
+                  <div class="field">
+                    <label>Password:</label>
+                    <input type="password" name="password" id="password" value="" size="20"/>
+                 </div>   
+                  <div class="field">
+                    <label>Product Type:</label>
+                    <select name="producttype" id="pt">
+					<option selected="selected">Books</option>
+					<option>PG</option>
+					<option>Gadgets</option>
+					</select>
+                  </div>
+				  <div class="field">
+                    <label id="pname">Product Name:</label>
+                    <input type="text"  name="productname" id="productname" value="" size="20"/>
+                  </div>
+				  <div class="field" id="plabel">
+                    <label>Price/Rent:</label>
+                    <input type="text" name="price" id="price" value="" size="20"/>
+                  </div>
+                  <div class="field">
+                    <label id="pdesp">Product/PG Description:</label>
+                    <textarea name="desp"  id="desp"  rows="1" cols="5"></textarea>
+                  </div>
+				   <div class="field">
+                    <label>Attach a pic:</label>
+                    <input type="file" name="file"  id="file" accept="image/jpeg">
+                  </div></br>
+                  <div><h2><input type="submit" value="Submit!"/></h2></div>
+                </fieldset>
+              </form>
+            </article> 
+          </section>
+        </div>
+      </div>
+    </div>
+</div>
+<SCRIPT LANGUAGE="JavaScript">
+
+function popup(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=1280,height=1024');");
+}
+
+</script>
+<script language="javascript">
+<!--
+$('#pt').change(function() {
+
+if(document.getElementById('pt').selectedIndex==0 )
+{
+document.getElementById("plabel").style.display = "block";
+document.getElementById("pdesp").innerHTML = "Product/PG Description:";
+document.getElementById("pname").innerHTML = "Product/PG Name:";
+ 
+}
+
+
+
+if(document.getElementById('pt').selectedIndex==1 )
+{
+document.getElementById("plabel").style.display = "block";
+document.getElementById("pdesp").innerHTML = "Property Description:";
+document.getElementById("pname").innerHTML = "Property Name:";
+ 
+}
+
+
+if(document.getElementById('pt').selectedIndex==2)
+{
+// document.getElementById("price").disabled = true;
+ document.getElementById("plabel").style.display = "block";
+ 
+  document.getElementById("pdesp").innerHTML = "Property Description:";
+  document.getElementById("pname").innerHTML = "Property Name:";
+}
+
+if(document.getElementById('pt').selectedIndex==3)
+{
+ 
+ document.getElementById("plabel").style.display = "block";
+ document.getElementById("pdesp").innerHTML = "Flat Description:";
+ document.getElementById("pname").innerHTML = "Property Name:";
+ 
+ 
+}
+
+if(document.getElementById('pt').selectedIndex==4)
+{
+ 
+ document.getElementById("plabel").style.display = "block";
+ document.getElementById("pdesp").innerHTML = "Plot Description";
+ document.getElementById("pname").innerHTML = "Property Name";
+ 
+ 
+}
+
+
+});
+
+
+
+
+
+
+
+
+
+//-->
+</script>
+  <!-- footer -->
+   <!-- footer -->
+ <footer>
+  <div class="container">
+    	<div class="wrapper">
+        <div class="fright"><a rel="nofollow" href="http://www.google.com/" target="_blank">Website designed by College Bazar team</a> &nbsp; |&nbsp; &nbsp;RVCE</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

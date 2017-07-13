@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>College Bazar</title>
+  <meta charset="utf-8">
+  
+  <!--Linking to CSS--> 
+  <link rel="stylesheet" href="css/reset.css" type="text/css" media="all">
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+  
+  <!--Built in JS Fonts--> 
+  <script type="text/javascript" src="js/jquery-1.4.2.min.js" ></script>
+  <script type="text/javascript" src="js/cufon-yui.js"></script>
+   <script type="text/javascript" src="js/cufon-replace.js"></script>
+  <script type="text/javascript" src="js/Humanst521_BT_400.font.js"></script>
+  <script type="text/javascript" src="js/Humanst521_Lt_BT_400.font.js"></script>
+  
+  <!--Built in JS Library for image roundabout--> 
+	<script type="text/javascript" src="js/roundabout.js"></script>
+  <script type="text/javascript" src="js/roundabout_shapes.js"></script>
+  <script type="text/javascript" src="js/gallery_init.js"></script>
+ 
+
+  <style type="text/css">
+<!--
+.style5 {
+	font-size: 14px;
+	font-weight: bold;
+}
+.style6 {
+	font-size: 16px;
+	font-weight: bold;
+}
+-->
+  </style>
+  <SCRIPT LANGUAGE="JavaScript">
+
+function popup(URL) {
+day = new Date();
+id = day.getTime();
+eval("page" + id + " = window.open(URL, '" + id + "', 'toolbar=0,scrollbars=0,location=0,statusbar=0,menubar=0,resizable=0,width=1280,height=1024');");
+}
+</script>
+</head>
+
+<body>
+  <!-- header -->
+  <header>
+  
+    <div class="container">
+    	<h1>College Bazar</h1>
+      <nav> <!-- navigator links -->
+        <ul>
+          <li><a href="index.html" class="current">Home</a></li>
+          <li><a href="books.html">Books</a></li>
+		  <li><a href="pg.html">PG's</a></li>
+          <li><a href="gadgets.html">Gadgets</a></li>
+		  <li><a href="contacts.html">Contact Us</a></li>
+		  
+        </ul>
+      </nav>
+    </div>
+</header>
+  <!-- #gallery -->
+  <a href="postad.html"><img src="images/Slide11.JPG" width="200" height="44" hspace="0" vspace="0"></a>
+  <section id="gallery">
+  	<div class="container">
+    	<ul id="myRoundabout">
+      	<li><img src="images/11.jpg" alt="" width="904"></li>
+        <li><img src="images/22.jpeg" alt=""></li>
+        <li><img src="images/33.png" alt=""></li>
+        <li><img src="images/44.jpg" alt=""></li>
+        <li><img src="images/5.jpg" alt=""></li>
+      </ul>
+  	</div>
+  </section>
+  <!-- /#gallery -->
+  
+  <div class="main-box">
+    <div class="container">
+      <div class="inside">
+        <div class="wrapper">
+        	<!-- aside -->
+          <aside>
+            <h2>Important <span>Links</span></h2>
+            <!-- .news -->
+            <ul class="news">
+			 <li>
+              	<figure><span class="style6">Register</span>For Free</figure>
+                <h3><a href="register.php">Register</a></h3>
+                Sign-up              </li>
+            
+            	<li>
+              	<figure><span class="style5">Post Ad</br></span>For free</figure>
+                <h3><a href="postad.html" >Post Ad</a></h3>
+                RVCE Website         </li>
+              <li>
+              	<figure><span class="style6">Admin</br></span>Login</figure>
+                <h3><a  href="login.php">Administrator</a></h3>
+                Check User List             </li>
+              
+            </ul>
+            <!-- /.news -->
+          </aside>
+
+          <!-- content -->
+          <section id="content">
+            <article>
+            	<h2>Welcome to <span>college bazar!</span></h2>
+              <p>A website for students for easy buying and selling</p>
+              <figure><a href="#"><img src="images/class.jpeg" alt="" height="200"></a></figure>
+              <p>&nbsp;</p>
+              <blockquote><span class="style5">
+                <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;College Bazar is an online marketplace for students. It provides an online bulletin board to buy and sell products, books, and gadgets, and also connect with potential buyers .</p></span>
+              </blockquote>
+            </article> 
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer>
+    <div class="container">
+    	<div class="wrapper">
+        <div class="fright"><a rel="nofollow" href="http://www.google.com/" target="_blank">Website designed by College Bazar team</a> &nbsp; |&nbsp; &nbsp;RVCE</div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
